@@ -452,6 +452,9 @@ function customPage() {
 		for(let i=0;i<bgs.length;i++) {
 			bgs[i].classList.add("imgbackground-sm-dark");
 		}
+
+		document.getElementById("purchase-brand").classList.add("purchase-brand-dark");
+
 	} else {
 		document.getElementsByClassName("x")[0].classList.remove("body-dark")
 		kits = document.getElementsByClassName("purchase-card") 
@@ -466,6 +469,7 @@ function customPage() {
 		for(let i=0;i<bgs.length;i++) {
 			bgs[i].classList.remove("imgbackground-sm-dark");
 		}
+		document.getElementById("purchase-brand").classList.remove("purchase-brand-dark");
 	}
 
 	var kit_temp = sessionStorage.getItem("kit");

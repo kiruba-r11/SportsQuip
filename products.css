@@ -135,10 +135,7 @@ main img {
 
 .product-card-dark {
 	background-color: #252a41;
-	margin-bottom: 50px;
-	padding: 15px;
-	border-radius: 5px;
-	box-shadow: 1px 2px 5px grey;
+	box-shadow: 1px 2px 5px #212529;
 }
 
 .product {
