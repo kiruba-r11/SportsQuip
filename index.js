@@ -152,7 +152,7 @@ function productsPage() {
 		}
 		else if(kit[1] === '2') {
 			productName += "Jerseys";
-			var imgSrc = "Assets/cricket_jersey/";
+			var imgSrc = "Assets/cricket_jerseys/";
 
 			document.getElementsByClassName("img-fluid")[0].src = imgSrc + "aus1.png";
 			document.getElementsByClassName("product-name")[0].textContent = "Australia";
@@ -287,7 +287,7 @@ function toggleButton(value) {
 		return;
 	}
 
-	var imgSrc = "Assets/cricket_jersey/";
+	var imgSrc = "Assets/cricket_jerseys/";
 	switch(value) {
 		case "1" : 
 			var img = document.getElementsByClassName("img-fluid")[0];
@@ -502,7 +502,7 @@ function customPage() {
 		purprice = document.getElementById("price-rupee")	
 		purprice.textContent = prices[i];
 
-		loc_src = "Assets/boots/"
+		loc_src = "Assets/football_boots/"
 		boot_locs = ["Adidas_Ghosted/","Adidas_Predator/","Nike_Phantom/","Nike_Superfly/","Puma_Future/","Puma_Ultra/"]
 
 		purimages = document.getElementsByClassName("img-fluid")
@@ -608,7 +608,7 @@ function customPage() {
 
 		var toggle = sessionStorage.getItem("toggle");
 
-		var imgSrc = "Assets/cricket_jersey/";
+		var imgSrc = "Assets/cricket_jerseys/";
 		if(brand === "1") imgSrc += "aus";
 		else if(brand === "2") imgSrc += "eng";
 		else if(brand === "3") imgSrc += "ind";
