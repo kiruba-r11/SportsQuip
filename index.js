@@ -750,41 +750,65 @@ function changeHeart(value) {
 	}
 }
 
+var dark = sessionStorage.getItem("dark");
+if(dark != null) {
+	if(dark === "1") {
+
+		document.getElementsByClassName("form-check-input")[0].checked = true;
+		applyLandingDarkMode();
+
+	} else {
+		document.querySelector("body").classList.remove("body-dark");
+		removeLandingDarkMode();
+
+	}
+}
 var switchButton = document.getElementsByClassName("form-check-input")[0];
 switchButton.addEventListener("click" , function(event) {
 	if(event.target.checked === true) {
-		document.querySelector("body").classList.add("body-dark");
 
-		document.querySelector(".bg-landing").classList.add("landing-page-dark")
-
-		var card = document.getElementsByClassName("sport-card");
-		for(var i = 0; i < card.length; i++) {
-			card[i].classList.add("sport-card-dark");
-		}
-
-		var introCard = document.getElementsByClassName("sport-intro-card");
-		for(var i = 0; i < introCard.length; i++) {
-			introCard[i].classList.add("sport-intro-card-dark");
-		}
+		applyLandingDarkMode();
 		sessionStorage.setItem("dark" , "1");
+
 	} else {
-		document.querySelector("body").classList.remove("body-dark");
-
-		document.querySelector(".bg-landing").classList.remove("landing-page-dark")
-
-		var card = document.getElementsByClassName("sport-card");
-		for(var i = 0; i < card.length; i++) {
-			card[i].classList.remove("sport-card-dark");
-		}
-
-		var introCard = document.getElementsByClassName("sport-intro-card");
-		for(var i = 0; i < introCard.length; i++) {
-			introCard[i].classList.remove("sport-intro-card-dark");
-		}
+		
+		removeLandingDarkMode();
 		sessionStorage.setItem("dark" , "0");
+
 	}
 });
 
+function applyLandingDarkMode() {
+	document.querySelector("body").classList.add("body-dark");
+
+	document.querySelector(".bg-landing").classList.add("landing-page-dark")
+
+	var card = document.getElementsByClassName("sport-card");
+	for(var i = 0; i < card.length; i++) {
+		card[i].classList.add("sport-card-dark");
+	}
+
+	var introCard = document.getElementsByClassName("sport-intro-card");
+	for(var i = 0; i < introCard.length; i++) {
+		introCard[i].classList.add("sport-intro-card-dark");
+	}
+}
+
+function removeLandingDarkMode() {
+	document.querySelector("body").classList.remove("body-dark");
+
+	document.querySelector(".bg-landing").classList.remove("landing-page-dark")
+
+	var card = document.getElementsByClassName("sport-card");
+	for(var i = 0; i < card.length; i++) {
+		card[i].classList.remove("sport-card-dark");
+	}
+
+	var introCard = document.getElementsByClassName("sport-intro-card");
+	for(var i = 0; i < introCard.length; i++) {
+		introCard[i].classList.remove("sport-intro-card-dark");
+	}
+}
 
 
 
