@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SportsQuip</title>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!-- Bootstrap Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="sportkit.css">
+
+</head>
+<body onload="sportKitPage()" class ="x">
+
+	<header>
+
+		<!-- Navigation Bar -->
+		<div class="container-fluid">
+			
+			<nav class="navbar navbar-expand-lg navbar-dark">
+				<div class="container">
+					<a class="navbar-brand" href="index.html">SportsQuip</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+      					<span class="navbar-toggler-icon"></span>
+				    </button>
+				    <div class="collapse navbar-collapse" id="navbar-content">
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item ps-3">
+								<a href="index.html" class="nav-link">Home</a>
+							</li>
+							<li class="nav-item dropdown ps-3">
+			          			<a class="nav-link active dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">
+					            Products
+					         	</a>
+					         <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+					            <li><h3 class="dropdown-header">Cricket</h3></li>
+					            <li><a onclick="loadProductsPages('C2')" class="dropdown-item" href="#">Jerseys</a></li>
+					            <li><a onclick="loadProductsPages('C1')" class="dropdown-item" href="#">Gloves</a></li>
+					            <li><a onclick="loadProductsPages('C3')" class="dropdown-item" href="#">Bats</a></li>
+					            <li><hr class="dropdown-divider"></li>
+					            <li><h3 class="dropdown-header">Football</h3></li>
+					            <li><a onclick="loadProductsPages('F2')" class="dropdown-item" href="#">Jerseys</a></li>
+					            <li><a onclick="loadProductsPages('F1')" class="dropdown-item" href="products.html">Boots</a></li>
+					        </ul>
+					        </li>
+							<li class="nav-item ps-2">
+								<a href="index.html#forms" class="nav-link">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</nav>
+		</div>
+		
+	</header>
+
+	<main>	
+		<div class="container-lg">
+	        <h1 class="title">Football - Kits</h1>
+
+	        <div class="row">
+	            <div class="cricket-card col-lg-6 col-md-6">
+	                <div class="kit-card">
+	                    <div class="img-background">
+	                        <img class="img-fluid img-width" src="Assets/Landing/b1.png">
+	                    </div>
+	                    <div class="kit">
+		                    <div class="kit-name">Boots</div>
+	                    </div>
+	                    <div class="kit-desc">Fast used to be fast enough. Gear up and ghost everyone in these adidas  Ghosted.</div>
+	                    <div class="btns">
+		                    <button onclick="loadProductsPage('1')" class="btn btn-kit-card-outline">VIEW</button>
+		                </div>
+	                </div>
+	            </div>
+	            <div class="cricket-card col-lg-6 col-md-6">
+	                <div class="kit-card">
+	                    <div class="img-background">
+	                        <img class="img-fluid img-width" src="Assets/Landing/j1.png">
+	                    </div>
+	                    <div class="kit">
+		                    <div class="kit-name">Jerseys</div>
+	                    </div>
+	                    <div class="kit-desc">Fast used to be fast enough. Gear up and ghost everyone in these adidas  Ghosted.</div>
+	                    <div class="btns">
+		                    <button onclick="loadProductsPage('2')" class="btn btn-kit-card-outline">VIEW</button>
+	                    </div>
+	                </div>
+	            </div>
+	            <div id="cricket-extra" class="col-lg-4 d-none col-md-6">
+	                <div class="kit-card">
+	                    <div class="img-background">
+	                        <img class="img-fluid img-width" src="Assets/Landing/j1.png">
+	                    </div>
+	                    <div class="kit">
+		                    <div class="kit-name">Jerseys</div>
+	                    </div>
+	                    <div class="kit-desc">Fast used to be fast enough. Gear up and ghost everyone in these adidas  Ghosted.</div>
+	                    <div class="btns">
+		                    <button onclick="loadProductsPage('3')" class="btn btn-kit-card-outline">VIEW</button>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+		</div>
+	</main>
+	
+	<footer>
+		<!-- Social Icons -->
+		<div class="social-icons">
+			<i class="fa-2x fab fa-facebook-f"></i>
+			<i class="fa-2x fab fa-twitter"></i>
+			<i class="fa-2x fab fa-instagram"></i>
+			<i class="fa-2x fas fa-envelope"></i> 
+		</div>
+		<p>&copy; Copyright 2021 <span>SportsQuip</span></p>
+	</footer>
+
+	<!-- JS Scripts -->
+	<script src="index.js"></script>
+</body>
+</html>

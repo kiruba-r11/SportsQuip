@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SportsQuip</title>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!-- Bootstrap Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="products.css">
+
+</head>
+<body onload="productsPage()" class ="x">
+
+	<header>
+
+		<!-- Navigation Bar -->
+		<div class="container-fluid">
+			
+			<nav class="navbar navbar-expand-lg navbar-dark">
+				<div class="container">
+					<a class="navbar-brand" href="index.html">SportsQuip</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+      					<span class="navbar-toggler-icon"></span>
+				    </button>
+				    <div class="collapse navbar-collapse" id="navbar-content">
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item ps-3">
+								<a href="index.html" class="nav-link">Home</a>
+							</li>
+							<li class="nav-item dropdown ps-3">
+			          			<a class="nav-link active dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">
+					            Products
+					         	</a>
+					         <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+					            <li><h3 class="dropdown-header">Cricket</h3></li>
+					            <li><a onclick="loadProductsPages('C2')" class="dropdown-item" href="#">Jerseys</a></li>
+					            <li><a onclick="loadProductsPages('C1')" class="dropdown-item" href="#">Gloves</a></li>
+					            <li><a onclick="loadProductsPages('C3')" class="dropdown-item" href="#">Bats</a></li>
+					            <li><hr class="dropdown-divider"></li>
+					            <li><h3 class="dropdown-header">Football</h3></li>
+					            <li><a onclick="loadProductsPages('F2')" class="dropdown-item" href="#">Jerseys</a></li>
+					            <li><a onclick="loadProductsPages('F1')" class="dropdown-item" href="products.html">Boots</a></li>
+					        </ul>
+					        </li>
+							<li class="nav-item ps-2">
+								<a href="index.html#forms" class="nav-link">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</nav>
+		</div>
+		
+	</header>
+
+	<main>	
+		<div class="container-lg">
+	        <h1 class="title">Football - Boots</h1>
+
+	        <div class="row">
+	            <div class="col-lg-4 col-md-6">
+	                <div class="product-card">
+	                    <div class="img-background">
+	                        <img class="img-fluid img-width" src="Assets/boots/Adidas_Ghosted/3.png">
+	                    </div>
+	                    <div class="product">
+		                    <div class="product-name">Adidas X Ghosted</div>
+		                    <i class="far fa-heart"  onclick="changeHeart(0)"></i>
+	                    </div>
+	                    <div class="product-desc">Fast used to be fast enough. Gear up and ghost everyone in these adidas  Ghosted.</div>
+	                    <div class="btns">
+		                    <button onclick="toggleButton('1')" class="btn-product-card-outline">Toggle</button>
+		                    <button onclick="loadCustomPage('1')" class="btn-product-card">Customise</button>
+		                </div>
+	                </div>
+	            </div>
+	            <div class="col-lg-4 col-md-6">
+	                <div class="product-card">
+	                    <div class="img-background">
+	                        <img class="img-fluid img-width" src="Assets/boots/Adidas_Predator/2.png">
+	                    </div>
+	                    <div class="product">
+		                    <div class="product-name">Adidas Predator 20.3</div>
+		                    <i class="far fa-heart"  onclick="changeHeart(1)"></i>
+	                    </div>
+	                    <div class="product-desc">Fast used to be fast enough. Gear up and ghost everyone in these adidas  Ghosted.</div>
+	                    <div class="btns">
+		                    <button  onclick="toggleButton('2')" class="btn-product-card-outline">Toggle</button>
+		                    <button onclick="loadCustomPage('2')" class="btn-product-card">Customise</button>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="col-lg-4 col-md-6">
+	                <div class="product-card">
+	                    <div class="img-background">
+	                        <img class="img-fluid img-width" src="Assets/boots/Nike_Phantom/1.png">
+	                    </div>
+	                    <div class="product">
+		                    <div class="product-name">Nike Phantom</div>
+		                    <i class="far fa-heart"  onclick="changeHeart(2)"></i>
+	                    </div>
+	                    <div class="product-desc">Fast used to be fast enough. Gear up and ghost everyone in these adidas  Ghosted.</div>
+	                    <div class="btns">
+		                    <button  onclick="toggleButton('3')" class="col-6 btn-product-card-outline">Toggle</button>
+		                    <button onclick="loadCustomPage('3')" class="col-6 btn-product-card">Customise</button>
+		                </div>
+	                </div>
+	            </div>
+	            <div class="cricket-card col-lg-4 col-md-6">
+	                <div class="product-card">
+	                    <div class="img-background">
+	                        <img class="img-fluid img-width" src="Assets/boots/Nike_Superfly/1.png">
+	                    </div>
+	                    <div class="product">
+		                    <div class="product-name">Nike Superfly 8 Elite</div>
+		                    <i class="far fa-heart"  onclick="changeHeart(3)"></i>
+	                    </div>
+	                    <div class="product-desc">Fast used to be fast enough. Gear up and ghost everyone in these adidas  Ghosted.</div>
+						<div class="btns">
+		                    <button  onclick="toggleButton('4')" class="col-6 btn-product-card-outline">Toggle</button>
+		                    <button onclick="loadCustomPage('4')" class="col-6 btn-product-card">Customise</button>
+	                   </div>
+	                </div>
+	            </div>
+	            <div class="cricket-card col-lg-4 col-md-6">
+	                <div class="product-card">
+	                    <div class="img-background">
+	                        <img class="img-fluid img-width" src="Assets/boots/Puma_Future/1.png">
+	                    </div>
+	                    <div class="product">
+		                    <div class="product-name">Puma Future Z</div>
+		                    <i class="far fa-heart"  onclick="changeHeart(4)"></i>
+	                    </div>
+	                    <div class="product-desc">Fast used to be fast enough. Gear up and ghost everyone in these adidas  Ghosted.</div>
+						<div class="btns">
+		                    <button  onclick="toggleButton('5')" class="col-6 btn-product-card-outline">Toggle</button>
+		                    <button onclick="loadCustomPage('5')" class="col-6 btn-product-card">Customise</button>
+		                </div>
+	                </div>
+	            </div>
+	            <div class="cricket-card col-lg-4 col-md-6">
+	                <div class="product-card">
+	                    <div class="img-background">
+	                        <img class="img-fluid img-width" src="Assets/boots/Puma_Ultra/1.png">
+	                    </div>
+	                    <div class="product">
+		                    <div class="product-name">Puma Ultra</div>
+		                    <i class="far fa-heart"  onclick="changeHeart(5)"></i>
+	                    </div>
+	                    <div class="product-desc">Fast used to be fast enough. Gear up and ghost everyone in these adidas  Ghosted.</div>
+	                    <div class="btns">
+		                    <button  onclick="toggleButton('6')" class="col-6 btn-product-card-outline">Toggle</button>
+		                    <button onclick="loadCustomPage('6')" class="col-6 btn-product-card">Customise</button>
+		                </div>
+	                </div>
+	            </div>
+	        </div>
+		</div>
+	</main>
+	
+	<footer>
+		<!-- Social Icons -->
+		<div class="social-icons">
+			<i class="fa-2x fab fa-facebook-f"></i>
+			<i class="fa-2x fab fa-twitter"></i>
+			<i class="fa-2x fab fa-instagram"></i>
+			<i class="fa-2x fas fa-envelope"></i> 
+		</div>
+		<p>&copy; Copyright 2021 <span>SportsQuip</span></p>
+	</footer>
+
+	<!-- JS Scripts -->
+	<script src="index.js"></script>
+</body>
+</html>

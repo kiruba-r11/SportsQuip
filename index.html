@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SportsQuip</title>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!-- Bootstrap Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+	<header>
+
+		<!-- Navigation Bar -->
+		<div class="container-fluid">
+			
+			<nav class="navbar navbar-expand-lg navbar-dark">
+				<div class="container">
+					<a class="navbar-brand" href="#">SportsQuip</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+      					<span class="navbar-toggler-icon"></span>
+				    </button>
+				    <div class="collapse navbar-collapse" id="navbar-content">
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item ps-3">
+								<a href="#" class="nav-link active">Home</a>
+							</li>
+							<li class="nav-item dropdown ps-3">
+			          			<a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">
+					            Products
+					         	</a>
+						        <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+						            <li><h3 class="dropdown-header">Cricket</h3></li>
+						            <li><a onclick="loadProductsPages('C2')" class="dropdown-item" href="#">Jerseys</a></li>
+						            <li><a onclick="loadProductsPages('C1')" class="dropdown-item" href="#">Gloves</a></li>
+						            <li><a onclick="loadProductsPages('C3')" class="dropdown-item" href="#">Bats</a></li>
+						            <li><hr class="dropdown-divider"></li>
+						            <li><h3 class="dropdown-header">Football</h3></li>
+						            <li><a onclick="loadProductsPages('F2')" class="dropdown-item" href="#">Jerseys</a></li>
+						            <li><a onclick="loadProductsPages('F1')" class="dropdown-item" href="products.html">Boots</a></li>
+						        </ul>
+						    </li>
+
+							<li class="nav-item ps-2">
+								<a href="#forms" class="nav-link">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</nav>
+		</div>
+		
+	</header>
+
+	<main>
+
+		<!-- Landing Page -->
+		<div class="landing-page bg-landing">
+
+			<!-- Switch Container -->
+			<div class="container" id="toggle-switch">
+				
+				<!-- Dark Mode Toggle Switch -->
+				<div class="form-check form-switch d-flex justify-content-end pe-1">
+					<input class="form-check-input" type="checkbox">
+				</div>
+
+			</div>
+
+			<div class="container-md d-flex justify-content-end align-items-center p-0">
+				<h1 class="title">Do you play with 100% precision and passion?!</h1>
+			</div>
+
+		</div>
+
+		<!-- Main Content -->
+		<div class="container-lg">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="sport-card">
+						<img src="Assets/Landing/a1.png" alt="football-img" class="img-fluid">
+						<button onclick="homePage('football')" class="btn btn-sport-card col-12">KICK OFF</button>
+					</div>
+				</div>
+				<div class="col-md-1 offset"></div>
+				<div class="col-md-7">
+					<div class="sport-intro-card">
+						<h1 class="sport-name">Football</h1>
+						<h3 class="sport-desc">People think it is a game played in a field with 2 inch tall grass, but only a few know that it is a battle of life and death. So, here are some cool accessories for those with a like mind.</h3>
+						<h5 class="sport-quote">Take part in the Soccer Evolution!</h5>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-7">
+					<div class="sport-intro-card">
+						<h1 class="sport-name">Cricket</h1>
+						<h3 class="sport-desc">To all the fans and players from Oz to England, get yourselves equipped with the best accessories and kits.</h3>
+						<h5 class="sport-quote">On your way towards Cricket Mania!</h5>
+					</div>
+				</div>
+				<div class="col-md-1 offset"></div>
+				<div class="col-md-4">
+					<div class="sport-card">
+						<img src="Assets/Landing/a2.png" alt="cricket-img" class="img-fluid">
+						<button onclick="homePage('cricket')" class="btn btn-sport-card col-12">LET'S PLAY</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	
+	<footer>
+
+		<!-- Forms -->
+		<section id="forms">
+			<form action="" class="row g-0">
+
+				<div class="col-lg-6 d-flex align-items-center justify-content-center px-5">
+					<h1>Contact Us</h1>
+				</div>
+
+				<div class="col-lg-6 px-5">
+					<div class="name-section mb-4">
+						<div class="col-6">
+						    <input type="text" placeholder="Name" class="form-control">
+						</div>
+
+						<div class="col-6">
+						    <input type="email" placeholder="Email" class="form-control">
+						</div>
+					</div>
+
+
+					<div class="text-holder mb-4">
+					    <input type="text" placeholder="Subject" class="form-control">
+					</div>
+
+					<div class="text-holder mb-4">
+						<textarea class="form-control" rows="6" placeholder="Message..."></textarea>
+					</div>
+
+					<button class="col-12 btn mb-5 btn-form btn-sport-card">SEND</button>
+				</div>
+
+			</form>
+			
+		</section>
+
+		<section id="footer-icons">
+			<!-- Social Icons -->
+			<div class="social-icons">
+				<i class="fa-2x fab fa-facebook-f"></i>
+				<i class="fa-2x fab fa-twitter"></i>
+				<i class="fa-2x fab fa-instagram"></i>
+				<i class="fa-2x fas fa-envelope"></i> 
+			</div>
+			<p>&copy; Copyright 2021 <span>SportsQuip</span></p>
+		</section>
+	</footer>
+
+	<!-- JS Scripts -->
+	<script src="index.js"></script>
+</body>
+</html>

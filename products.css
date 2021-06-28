@@ -1,0 +1,312 @@
+* {
+	font-family: 'Poppins';
+}
+
+/* Header */
+/* ---------------------------------------------------- */
+
+/* Container */
+
+.body-dark {
+	background-color: #212529;
+	color: white;
+}
+
+header .container-fluid {
+	padding: 0 !important;
+}
+
+/* Navigation Bar */
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #007BFF !important;
+}
+
+.navbar-brand , .nav-link {
+	color: #BFDEFF !important;
+}
+
+.navbar-brand:hover , .nav-link:hover {
+	color: white !important;
+}
+
+.active {
+	font-weight: 600 !important;
+	color: white !important;
+}
+
+.dropdown-header {
+	color: #007BFF !important;
+}
+
+/* Main */
+/* ---------------------------------------------------- */
+
+/* Row */
+
+.row {
+	margin-bottom: 45px;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+}
+
+/* Images */
+
+main img {
+	border-radius: 5px;
+}
+
+.img-fluid {
+	max-width: 80%;
+}
+
+.img-background {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 50px 40px;
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-background-dark {
+    background-color: #212529;
+}
+
+/* Buttons */
+
+.btns {
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn-product-card-outline {
+	background-color: transparent;
+	color: #007BFF;
+	font-size: 1.2rem;
+	padding: 13px 10px ;
+	border-radius: 5px;
+	margin-top: 20px;
+	border: 2px solid #007BFF;
+	width: 48%;
+	transition: ease-in 0.4s;
+}
+
+.btn-product-card-outline:hover {
+	background-color: #007BFF;
+	cursor: pointer;
+	color: white;
+	transition: ease-out 0.4s;
+}
+
+.btn-product-card {
+	background-color:  #007BFF;
+	color: white;
+	border: 2px solid #007BFF;
+	font-size: 1.2rem;
+	padding: 13px 10px;
+	border-radius: 5px;
+	width: 48%;
+	margin-top: 20px;
+	transition: ease-in 0.4s;
+}
+
+.btn-product-card:hover {
+	background-color: #0065d1;
+	border: 2px solid #0065d1;
+	cursor: pointer;
+	color: white;
+	transition: ease-out 0.4s;
+}
+
+/* Intro Card */
+
+.product-card {
+	margin-bottom: 50px;
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 1px 2px 5px grey;
+}
+
+.product-card-dark {
+	background-color: #252a41;
+	margin-bottom: 50px;
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 1px 2px 5px grey;
+}
+
+.product {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* Texts */
+
+.product-name {
+	color: #007BFF;
+	font-size: 1.5rem;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	line-height: 2;
+}
+
+.product-desc {
+	font-size: 1.1rem;
+	line-height: 1.8;
+	margin-bottom: 10px;
+}
+
+main .title {
+    margin: 100px 0 70px;
+    color: #007BFF;
+}
+
+/* Heart Icon */
+
+.fa-heart {
+	font-size: 2.5rem;
+	color: red;
+}
+
+.fa-heart:hover {
+	cursor: pointer;
+}
+
+/* Footer */
+/* ---------------------------------------------------- */
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 20px;
+}
+
+footer .social-icons {
+	padding: 10px;
+	text-align: center;
+}
+
+footer .fa-2x {
+	padding: 10px;
+	transition: 0.5s;
+}
+
+footer .fa-2x:hover {
+	color: #007BFF;
+	transition: 0.5s;
+}
+
+footer p {
+	margin: 20px 0;
+	font-size: 1.3rem;
+}
+
+footer span {
+	margin-left: 8px;
+	color: #007BFF;
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+
+/* Media Queries */
+/* ---------------------------------------------------- */
+
+@media (max-width: 990px) {
+
+	.nav-item:nth-of-type(3) {
+		padding-left: 16px !important;
+	}
+
+	main .title {
+		text-align: center;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	main .row {
+		margin: 40px;
+	}
+
+	main .col-md-4 , main .col-md-7 {
+		display: flex;
+		margin-bottom: 30px;
+		justify-content: center;
+	}
+}
+
+@media (max-width:  575px) {
+
+	main .row {
+		margin: 40px 0;
+	}
+
+	footer .social-icons {
+		padding: 5px;
+	}
+
+	footer p { 
+		margin: 10px 0;
+		font-size: 1rem;
+	} 
+
+	footer span {
+		font-size: 1.2rem;
+	}
+
+	.fa-2x {
+		font-size: 1.8rem;
+	}
+
+	.img-background {
+		min-height: 250px;
+	}
+
+}
+
+@media (max-width: 350px) {
+
+	.btns {
+		flex-direction: column;
+	}
+
+	.btn-product-card {
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.btn-product-card-outline {
+		width: 100%;
+	}
+
+}
+
+@media (max-width:  300px) {
+
+	footer .social-icons {
+		padding: 0;
+	}
+
+	footer p { 
+		font-size: 0.8rem;
+	} 
+
+	footer span {
+		font-size: 1rem;
+	}
+
+	.fa-2x {
+		font-size: 1.5rem;
+	}
+
+}
