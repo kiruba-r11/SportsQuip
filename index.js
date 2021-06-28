@@ -42,9 +42,9 @@ function sportKitPage() {
 			cricketCard[i].classList.add("col-lg-4");
 		}
 
-		document.getElementsByClassName("img-fluid")[0].src ="Assets/Landing/gloves11.png";
-		document.getElementsByClassName("img-fluid")[1].src ="Assets/Landing/aus2.png";
-		document.getElementsByClassName("img-fluid")[2].src ="Assets/Landing/bat1.png";
+		document.getElementsByClassName("img-fluid")[0].src ="Assets/landing/gloves11.png";
+		document.getElementsByClassName("img-fluid")[1].src ="Assets/landing/aus2.png";
+		document.getElementsByClassName("img-fluid")[2].src ="Assets/landing/bat1.png";
 
 		document.getElementsByClassName("kit-name")[0].textContent = "Gloves";
 		document.getElementsByClassName("kit-name")[2].textContent = "Bats";
