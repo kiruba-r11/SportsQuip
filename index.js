@@ -5,6 +5,11 @@ function homePage(value) {
 }
 
 function sportKitPage() {
+	var form = document.getElementsByClassName("nav-link");
+	form[form.length - 1].addEventListener("click" , function() {
+		sessionStorage.setItem("contact" , "1");
+	});
+
 	d = sessionStorage.getItem("dark")
 
 	if(d === '1') {
@@ -54,7 +59,6 @@ function sportKitPage() {
 		descs.push("Check out our new varieties of high quality willow bats, that will provide you optimum performance")
 
 		kit_descs = document.getElementsByClassName("kit-desc");
-		console.log(descs)
 
 		for(let i=0;i<3;i++) {
 			kit_descs[i].textContent = descs[i];
@@ -66,7 +70,6 @@ function sportKitPage() {
 		descs.push("Support your favourite team and show the power of the crowd by checking out our jersey merch shelf.")
 
 		kit_descs = document.getElementsByClassName("kit-desc");
-		console.log(descs)
 
 		for(let i=0;i<2;i++) {
 			kit_descs[i].textContent = descs[i];
@@ -91,6 +94,11 @@ function loadProductsPage(value) {
 }
 
 function productsPage() {
+	var form = document.getElementsByClassName("nav-link");
+	form[form.length - 1].addEventListener("click" , function() {
+		sessionStorage.setItem("contact" , "1");
+	});
+
 	d = sessionStorage.getItem("dark")
 
 	if(d === '1') {
@@ -109,7 +117,6 @@ function productsPage() {
 		document.getElementsByClassName("x")[0].classList.remove("body-dark")
 		kits = document.getElementsByClassName("product-card") 
 		for(let i=0;i<kits.length;i++) {
-			console.log("a")
 			kits[i].classList.remove("product-card-dark");
 		}
 		bgs = document.getElementsByClassName("img-background")
@@ -436,6 +443,11 @@ function loadCustomPage(value) {
 }
 
 function customPage() {
+	var form = document.getElementsByClassName("nav-link");
+	form[form.length - 1].addEventListener("click" , function() {
+		sessionStorage.setItem("contact" , "1");
+	});
+
 	d = sessionStorage.getItem("dark")
 
 	if(d === '1') {
@@ -562,7 +574,6 @@ function customPage() {
 		piccontainer[0].classList.add("d-none")
 
 		purimages[0].src = loc_src+boot_locs[i]+(1+parseInt(addup[2*i]))+".png"
-		console.log(addup)
 	} else if(kit_temp === 'C1') {
 
 		purimages = document.getElementsByClassName("img-fluid")
@@ -810,7 +821,35 @@ function removeLandingDarkMode() {
 	}
 }
 
+var contact = sessionStorage.getItem("contact");
+if(contact != null) {
+	if(contact === "1") {
+		var form = document.getElementsByClassName("nav-link");
+		form[form.length - 1].classList.add("active");
+		form[0].classList.remove("active");
+	}
+}
 
+var form = document.getElementsByClassName("nav-link");
+form[form.length - 1].addEventListener("click" , function() {
+	sessionStorage.setItem("contact" , "1");
+	form[form.length - 1].classList.add("active");
+	form[0].classList.remove("active");
+});
+
+var home = document.getElementsByClassName("nav-link");
+var navBrand = document.getElementsByClassName("navbar-brand")[0];
+form[0].addEventListener("click" , function() {
+	sessionStorage.setItem("contact" , "0");
+	form[form.length - 1].classList.remove("active");
+	form[0].classList.add("active");
+});
+
+navBrand.addEventListener("click" , function() {
+	sessionStorage.setItem("contact" , "0");
+	form[form.length - 1].classList.remove("active");
+	form[0].classList.add("active");
+});
 
 
 
