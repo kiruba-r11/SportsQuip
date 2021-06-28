@@ -68,14 +68,14 @@ main .landing-page {
 }
 
 .bg-landing {
-	background-image: url("Assets/Landing/light_bg.jpeg");
+	background-image: url("Assets/landing/light_bg.jpeg");
 	background-repeat: no-repeat;
 	background-position: 22% 70%;
 	background-size: cover;
 }
 
 .landing-page-dark {
-	background-image: url("Assets/Landing/dark_bg.jpeg");
+	background-image: url("Assets/landing/dark_bg.jpeg");
 }
 
 main .landing-page::before {
