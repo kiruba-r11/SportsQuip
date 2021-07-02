@@ -254,6 +254,7 @@ footer .fa-2x {
 
 footer .fa-2x:hover {
 	color: #007BFF;
+	cursor: pointer;
 	transition: 0.5s;
 }
 
