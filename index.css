@@ -164,7 +164,6 @@ main img {
 	background-color: #007BFF;
 	cursor: pointer;
 	color: white;
-	transition: ease-out 0.4s;
 }
 
 .btn-form {
@@ -233,8 +232,6 @@ footer .fa-2x {
 
 footer .fa-2x:hover {
 	color: #007BFF;
-	cursor: pointer;
-	transition: 0.5s;
 }
 
 footer p {
